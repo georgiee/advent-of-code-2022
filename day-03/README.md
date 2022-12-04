@@ -1,6 +1,7 @@
 # Day 03
-Cool challenge. Time run out for part 3 but qith the uni/intersection features of ruby arrays/enums I think that should be simple. I check if I can come back.
-
+Cool challenge. 
+Core of part 1 was having an intersection method on arrays in ruby
+Part 2 was a combination of each_slice(3) with the intersection and the mapping from part 1. That was a fast part 2
 
 ```
 
