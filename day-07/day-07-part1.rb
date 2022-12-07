@@ -1,8 +1,6 @@
 require 'ostruct'
 
 path = File.join(__dir__, 'input.txt')
-
-
 log = File.read(path).each_line(chomp: true).to_a
 
 class Folder
@@ -58,7 +56,8 @@ def create_or_find_folder(name, parent)
   $fs[Folder.path(name, parent)] ||= Folder.new(name, 0, parent, true)
 end
 
-result = log[1..].inject({cwd: root, index: {}}) do |system, line|
+log[1..].inject({cwd: root}) do |system, line|
+  # when switching the folder take care of creating the instance
   if folder = line[/\$ cd (.*)/, 1]
     if folder == ".."
       system[:cwd] = system[:cwd].parent
@@ -70,15 +69,14 @@ result = log[1..].inject({cwd: root, index: {}}) do |system, line|
       system[:cwd] = newFolder
     end
   end
-
+  
+  # the current folder is set and we can proceed with any file that might appear
   if line[/\d+ (.*)/]
     size, name = /(\d+) (.*)/.match(line)[1 ,2]
     system[:cwd] << Folder.new(name, size.to_i, system[:cwd])
   end
   
-  # p system
   system
-
 end
 
 def print_tree(folder)
@@ -90,7 +88,8 @@ def print_tree(folder)
   end
 end
 
-# print_tree(root)
+print_tree(root)
+# result is 1611443
 p $fs.values.reject{_1.file?}.map{_1.size}.reject{_1 > 100000}.sum
 
 # fs = result[:fs]

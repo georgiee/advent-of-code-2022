@@ -98,6 +98,7 @@ DESIRED_SPACE = 30000000
 CURRENT_SPACE = MAX_SPACE - root.size
 
 candidates = $fs.values.select{_1.folder?}.map {[_1.name, _1.size]}
+# ["mzzpfnr", 2086088]
 p candidates.sort_by{|(name, size) | size}.find{|(name, size) | CURRENT_SPACE + size >= DESIRED_SPACE }
 # fs = result[:fs]
 # # ok that list works but it misses the point of indirect files (folder in folders)
