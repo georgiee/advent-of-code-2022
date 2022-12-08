@@ -9,7 +9,8 @@ No time this year because the mornings are busy — so I'm prepared to fail earl
 + [Day 04](day-04/)
 + [Day 05](day-05/)
 + [Day 06](day-06/) (super fast ✨)
-+ [Day 06](day-07/) (tough one 😰)
++ [Day 07](day-07/) (tough one 😰)
++ [Day 08](day-08/)
 
 ## Neat things I learned
 Let's see if I learn as much as last year.
