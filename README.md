@@ -11,6 +11,8 @@ No time this year because the mornings are busy — so I'm prepared to fail earl
 + [Day 06](day-06/) (super fast ✨)
 + [Day 07](day-07/) (tough one 😰)
 + [Day 08](day-08/)
++ [Day 09](day-09/) (part 2 failed, time is up)
++ [Day 10](day-10/) (weekend bump, no time)
++ [Day 11](day-11/) (weekend bump, no time)
 
-## Neat things I learned
-Let's see if I learn as much as last year.
+I think that's the turning point of this year. My personal time constraints don't fit the required amount of time to work on it. 
